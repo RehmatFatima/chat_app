@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Enter your name</h2>
+        <input id="username" type="text" placeholder="Your name">
+        <button id="join-btn">Join Chat</button>
+    </div>
+
+    <div id="chat-container" style="display:none;">
+        <div id="messages"></div>
+        <input id="message-input" type="text" placeholder="Type your message...">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
